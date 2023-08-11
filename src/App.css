@@ -1,6 +1,7 @@
 body {
   font-family: "Lato", sans-serif;
 }
+@import "~react-image-gallery/styles/css/image-gallery.css";
 h4 {
   color: black;
 }
@@ -151,7 +152,8 @@ a{
 .letter-animation span {
   display: inline-block;
   margin-top: 5px;
-  animation: bounce 1s infinite alternate; /* Subir y bajar */
+  animation: bounce 1s infinite alternate;
+  cursor: pointer;
 }
 
 /* Aplicar retraso a cada letra */
@@ -194,7 +196,7 @@ a{
 /* SERVICIOS QUE OFRECEMOS */
 
 .containerObrasServicios {
-  margin-top: 150px;
+  margin-top: 75px;
   margin-inline: 200px;
 }
 .servicioImg {
@@ -234,7 +236,7 @@ a{
 /* FOOTER */
 
 .footer {
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -263,6 +265,10 @@ a{
 .socialLinks div:hover a {
   color: #1e5a70; /* Color destacado al pasar el cursor */
   text-shadow: 0 0 10px #3417fb; /* Efecto de sombra al destacar */
+}
+.bigLogo{
+  height: 350px;
+  cursor: pointer;
 }
 
 
@@ -298,5 +304,12 @@ a{
   }
   .card {
     margin-bottom: 50px;
+  }
+  .listaSoluciones{
+    flex-direction: column;
+  }
+  .footer{
+    height: 950px;
+    flex-direction: column;
   }
 }

@@ -9,6 +9,14 @@ export const Footer = () => {
     const facebook = require("../../assets/facebook.png")
     const ig = require("../../assets/instagram.png")
     const tiktok = require("../../assets/LOGO-TIKTOK-png-300x300.png")
+    const logo = require("../../assets/logo.png")
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <>
             <div className='footer' id='contacto'>
@@ -59,7 +67,12 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p>MARCAS</p>
+                    <img
+                        src={logo}
+                        alt="Imagen completa"
+                        className='bigLogo'
+                        onClick={() => scrollToSection('inicio')}
+                    />
                 </div>
                 <div>
                     <div className='socialLinks'>
