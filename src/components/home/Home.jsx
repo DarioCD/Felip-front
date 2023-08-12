@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Modal } from 'react-bootstrap';
 import ImageGallery from "react-image-gallery";
 import { Register } from '../register/Register';
+import { Form } from '../form/Form';
 
 const Home = ({ userData, setUserData }) => {
     useEffect(() => {
@@ -199,15 +200,11 @@ const Home = ({ userData, setUserData }) => {
                         impermeabilización y el aislamiento.
                     </p>
                 </div>
-                <div className='containerObrasServicios'>
+                <div className='containerObrasServicios' id='contacto'>
                     <h1>CONTACTA CON NOSOTROS</h1>
                     <p>Rellene este formulario y nos pondremos en contacto con usted lo antes posible</p>
-                    <Register/>
+                    <Form/>
                 </div>
-                {/* <div className='homeDatos'>
-                <Link to={"/login"} className='btn'> IR AL LOGIN AQUI</Link>
-                <Link to={"/register"}> IR AL REGISTER AQUI</Link>
-            </div> */}
             </div>
         </>
     )

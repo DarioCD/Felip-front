@@ -19,7 +19,7 @@ export const Footer = () => {
     };
     return (
         <>
-            <div className='footer' id='contacto'>
+            <div className='footer'>
                 <div className='footerItemContainerGlobal'>
                     <div>
                         <div className='footerItemContainer'>
