@@ -12,9 +12,7 @@ export const Form = () => {
             showConfirmButton: false,
             timer: 1500
         })
-        setTimeout(() => {
-            window.location.reload();
-        }, 1500);
+       
     }
 
     return (

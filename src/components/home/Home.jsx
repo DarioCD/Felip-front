@@ -6,6 +6,7 @@ import { Modal } from 'react-bootstrap';
 import ImageGallery from "react-image-gallery";
 import { Register } from '../register/Register';
 import { Form } from '../form/Form';
+import { Obra } from '../obra/Obra';
 
 const Home = ({ userData, setUserData }) => {
     useEffect(() => {
@@ -166,7 +167,7 @@ const Home = ({ userData, setUserData }) => {
                         Nos enorgullecemos de llevar a cabo proyectos de diversos tamaños, desde obras particulares de menor escala hasta
                         impresionantes edificaciones y obras civiles de gran envergadura.
                     </p>
-                    <ImageGallery items={images} />
+                    <Obra/>
                 </div>
                 <div className='containerObrasServicios' id="nosotros">
                     <h1>SOBRE NOSOTROS</h1>

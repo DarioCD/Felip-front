@@ -82,7 +82,7 @@ export const Footer = () => {
                                 alt="Imagen completa"
                                 className='footerImg'
                             />
-                            <a href="https://m.facebook.com/p/Impermeabilizaciones-DIAZ-100063882495439/" target="_blank" rel="noopener noreferrer">Visita nuestra página de Facebook</a>
+                            <a href="https://www.facebook.com/profile.php?id=100095345183762" target="_blank" rel="noopener noreferrer">Visita nuestra página de Facebook</a>
                         </div>
                         <div>
                             <img
@@ -90,7 +90,7 @@ export const Footer = () => {
                                 alt="Imagen completa"
                                 className='footerImg'
                             />
-                            <a href="https://www.instagram.com/tu_perfil_de_instagram/" target="_blank" rel="noopener noreferrer">Visita nuestro perfil de Instagram</a>
+                            <a href="https://www.instagram.com/impermeabilizacionesfp/" target="_blank" rel="noopener noreferrer">Visita nuestro perfil de Instagram</a>
                         </div>
                         <div>
                             <img
