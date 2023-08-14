@@ -282,8 +282,8 @@ a {
 .obraContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -1rem;
+  justify-content: center;
+  margin: 0 -3rem;
 }
 
 .obraContainer > * {
@@ -295,7 +295,22 @@ a {
   width: 100%;
   height: 350px;
 }
+.form-container {
+  position: relative;
+}
 
+.inoperable-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
 /* FOOTER */
 
 .footer {
@@ -318,6 +333,7 @@ a {
 .footerItemContainerGlobal {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 .socialLinks div a {
   transition: all 0.3s ease;
@@ -329,8 +345,12 @@ a {
   color: #1e5a70;
   text-shadow: 0 0 10px #3417fb;
 }
+.bigLogoContainer {
+  display: flex;
+  justify-content: center;
+}
 .bigLogo {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   cursor: pointer;
 }
@@ -358,11 +378,15 @@ a {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .headerTop {
     flex-direction: column;
     text-align: center;
@@ -411,8 +435,5 @@ a {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #bbd7db;
-  }
-  .obraContainer > * {
-    width: calc(50% - 2rem); /* Dos cartas por fila en pantallas pequeñas */
   }
 }

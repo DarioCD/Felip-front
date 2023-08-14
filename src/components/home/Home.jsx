@@ -49,9 +49,9 @@ const Home = () => {
                     </Carousel>
                     <div className='carouselBottom'>
                         {
-                            window.innerWidth >= 767 ? <h4>Somos expertos en impermeabilización</h4> : <></>
+                            window.innerWidth >= 900 ? <h4>Somos expertos en impermeabilización</h4> : <></>
                         }
-                        <h4 class="letter-animation" onClick={() => scrollToSection('contacto')}>
+                        <h4 className="letter-animation" onClick={() => scrollToSection('contacto')}>
                             <span>C</span><span>O</span><span>N</span><span>O</span><span>C</span><span>E</span><span>N</span><span>O</span><span>S</span>
                         </h4>
                     </div>
@@ -63,7 +63,7 @@ const Home = () => {
                         asegurando que obtenga la solución óptima adecuada para sus requerimientos.
                     </p>
                     <div className='containerCards'>
-                        <Card style={window.innerWidth >= 767 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
+                        <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
                             <Card.Img variant="top" src={techo} onClick={() => toggleModal(techo)} style={{ width: '100%', height: '250px' }} />
                             <Card.Body>
                                 <Card.Title>Techo</Card.Title>
@@ -74,8 +74,8 @@ const Home = () => {
                             </Card.Body>
                         </Card>
                         {
-                            window.innerWidth >= 767 ?
-                                <Card style={window.innerWidth >= 767 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
+                            window.innerWidth >= 900 ?
+                                <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
                                     <Card.Body>
                                         <Card.Title>Piscina</Card.Title>
                                         <Card.Text>
@@ -86,7 +86,7 @@ const Home = () => {
                                     <Card.Img variant="bottom" src={piscina} onClick={() => toggleModal(piscina)} style={{ width: '100%', height: '250px' }} />
                                 </Card>
                                 :
-                                <Card style={window.innerWidth >= 767 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
+                                <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
                                     <Card.Img variant="bottom" src={piscina} onClick={() => toggleModal(piscina)} style={{ width: '100%', height: '250px' }} />
                                     <Card.Body>
                                         <Card.Title>Piscina</Card.Title>
@@ -97,7 +97,7 @@ const Home = () => {
                                     </Card.Body>
                                 </Card>
                         }
-                        <Card style={window.innerWidth >= 767 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
+                        <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
                             <Card.Img variant="top" src={azotea} onClick={() => toggleModal(azotea)} style={{ width: '100%', height: '250px' }} />
                             <Card.Body>
                                 <Card.Title>Azotea</Card.Title>
@@ -118,7 +118,7 @@ const Home = () => {
                         </Modal>
                     </div>
                     <div className='containerSoluciones'>
-                        <h2>Soulciones a medida</h2>
+                        <h2>Soluciones a medida</h2>
                         <div className='listaSoluciones'>
                             <p className='textoSoluciones'>Proporcionamos una amplia gama de opciones para proteger su estructuras de la humedad. Ya sea en edificios o
                                 proyectos de construcción civil,

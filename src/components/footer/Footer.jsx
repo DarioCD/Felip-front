@@ -66,7 +66,7 @@ export const Footer = () => {
                         <span>+34 630 563 416 / +34 677 244 041</span>
                     </div>
                 </div>
-                <div>
+                <div className='bigLogoContainer'>
                     <img
                         src={logo}
                         alt="Imagen completa"

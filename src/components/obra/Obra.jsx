@@ -92,7 +92,7 @@ export const Obra = () => {
         <>
             {/* <ImageGallery items={images} /> */}
             <div className='obraContainer'>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA EN AZOTEA</b></Card.Title>
                         <Card.Text>
@@ -110,7 +110,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA EN TERRAZA</b></Card.Title>
                         <Card.Text>
@@ -132,7 +132,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA EN AZOTEA</b></Card.Title>
                         <Card.Text>
@@ -156,7 +156,7 @@ export const Obra = () => {
                         </Carousel>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>REFORMA DE TEJADO</b></Card.Title>
                         <Card.Text>
@@ -186,7 +186,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA DE AZOTEA</b></Card.Title>
                         <Card.Text>
@@ -204,7 +204,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>REFORMA PISCINA</b></Card.Title>
                         <Card.Text>
@@ -255,7 +255,7 @@ export const Obra = () => {
 
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA AZOTEA</b></Card.Title>
                         <Card.Text>
@@ -281,7 +281,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA PISCINA</b></Card.Title>
                         <Card.Text>
@@ -303,7 +303,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA TECHO</b></Card.Title>
                         <Card.Text>
@@ -333,7 +333,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA PISCINA</b></Card.Title>
                         <Card.Text>
@@ -355,7 +355,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA DEPÓSITO DE AGUA</b></Card.Title>
                         <Card.Text>
@@ -389,7 +389,7 @@ export const Obra = () => {
                         </Carousel.Item>
                     </Carousel>
                 </Card>
-                <Card style={window.innerWidth >= 767 ? { width: '25 rem' } : { width: '20rem' }}>
+                <Card style={window.innerWidth >= 900 ? { width: '25 rem' } : { width: '20rem' }}>
                     <Card.Body>
                         <Card.Title><b>OBRA PISCINA</b></Card.Title>
                         <Card.Text>
