@@ -65,20 +65,20 @@ export const Obra = () => {
     const obraDeposito5 = require("../../assets/obra_deposito5.jpg")
     const obraDeposito6 = require("../../assets/obra_deposito6.jpg")
 
-    const images = [
-        {
-            original: techo,
-            thumbnail: techo,
-        },
-        {
-            original: piscina,
-            thumbnail: piscina,
-        },
-        {
-            original: azotea,
-            thumbnail: azotea,
-        },
-    ];
+    // const images = [
+    //     {
+    //         original: techo,
+    //         thumbnail: techo,
+    //     },
+    //     {
+    //         original: piscina,
+    //         thumbnail: piscina,
+    //     },
+    //     {
+    //         original: azotea,
+    //         thumbnail: azotea,
+    //     },
+    // ];
 
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');

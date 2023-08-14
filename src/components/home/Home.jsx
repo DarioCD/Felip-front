@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Carousel from "react-bootstrap/Carousel";
 import Card from 'react-bootstrap/Card';
 import { Modal } from 'react-bootstrap';
-import ImageGallery from "react-image-gallery";
-import { Register } from '../register/Register';
 import { Form } from '../form/Form';
 import { Obra } from '../obra/Obra';
 
-const Home = ({ userData, setUserData }) => {
-    useEffect(() => {
-        console.log(userData);
-    }, [userData])
+const Home = () => {
     const techo = require("../../assets/techo.jpg")
     const piscina = require("../../assets/piscina.jpg")
     const azotea = require("../../assets/azotea.jpg")
@@ -22,21 +16,6 @@ const Home = ({ userData, setUserData }) => {
 
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
-
-    const images = [
-        {
-            original: techo,
-            thumbnail: techo,
-        },
-        {
-            original: piscina,
-            thumbnail: piscina,
-        },
-        {
-            original: azotea,
-            thumbnail: azotea,
-        },
-    ];
 
     const toggleModal = (image) => {
         setSelectedImage(image);

@@ -1,18 +1,48 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
+import EmailServices from '../../services/email.service';
 
 export const Form = () => {
+    const initialInputsData = {
+        nombre: "",
+        apellidos: "",
+        email: "",
+        phone: "",
+        description: ""
+    };
+
+    const [inputsData, setinputsData] = useState(initialInputsData);
+    const [isLoading, setIsLoading] = useState(false);
+
+
+    const handleOnChange = (e) => {
+        setinputsData({
+            ...inputsData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Correo enviado con éxito',
-            showConfirmButton: false,
-            timer: 1500
-        })
-       
+        setIsLoading(true);
+        async function sendEmail() {
+            try {
+                await EmailServices.sendEmail(inputsData);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Correo enviado con éxito',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                setinputsData(initialInputsData);
+            } catch (error) {
+                console.log(error);
+            }
+            setIsLoading(false);
+        }
+        sendEmail();
     }
 
     return (
@@ -32,8 +62,8 @@ export const Form = () => {
                                     placeholder=""
                                     required
                                     className="fromImput"
-                                // onChange={handleOnChange}
-                                // value={inputsData.nombre}
+                                    onChange={handleOnChange}
+                                    value={inputsData.nombre}
                                 />
                             </div>
                         </div>
@@ -49,8 +79,8 @@ export const Form = () => {
                                     placeholder=""
                                     required
                                     className="fromImput"
-                                // onChange={handleOnChange}
-                                // value={inputsData.apellidos}
+                                    onChange={handleOnChange}
+                                    value={inputsData.apellidos}
                                 />
                             </div>
                         </div>
@@ -68,8 +98,8 @@ export const Form = () => {
                                     placeholder=""
                                     required
                                     className="fromImput"
-                                // onChange={handleOnChange}
-                                // value={inputsData.email}
+                                    onChange={handleOnChange}
+                                    value={inputsData.email}
                                 />
                             </div>
                         </div>
@@ -86,6 +116,8 @@ export const Form = () => {
                                     placeholder=""
                                     required
                                     className="fromImput"
+                                    onChange={handleOnChange}
+                                    value={inputsData.phone}
                                 />
                             </div>
                         </div>
@@ -104,6 +136,8 @@ export const Form = () => {
                                 required
                                 className="form-input"
                                 wrap="soft"
+                                onChange={handleOnChange}
+                                value={inputsData.description}
                             ></textarea>
                         </div>
                     </div>
@@ -115,6 +149,11 @@ export const Form = () => {
                     </button>
                 </div>
             </form>
+            {isLoading && (
+                <div className="loader-container">
+                    <div className="loader"></div>
+                </div>
+            )}
         </>
     )
 }
