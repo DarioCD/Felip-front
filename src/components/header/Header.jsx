@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 export const Header = () => {
     const phone = require("../../assets/ring-phone.png")
@@ -21,13 +20,13 @@ export const Header = () => {
                     </div>
                     <div>
                         <img src={mail} alt='mail' className='headerImg' />
-                        <span>impermeabilizacionesfp@gmail.com</span>
+                        <span>impermeabilizacionesfelipe@gmail.com</span>
                     </div>
                 </div>
                 <div className='headerBottom'>
                     <img src={logo} alt='logo' className='headerLogo' />
                     <h4 onClick={() => scrollToSection('servicios')} className="hover-border">Servicios</h4>
-                    <h4 onClick={() => scrollToSection('obras')} className="hover-border">Obras</h4>
+                    <h4 onClick={() => scrollToSection('obras')} className="hover-border">Trabajos realizados</h4>
                     <h4 onClick={() => scrollToSection('nosotros')} className="hover-border">Sobre nosotros</h4>
                     <h4 onClick={() => scrollToSection('contacto')} className="hover-border">Contacto</h4>
                 </div>

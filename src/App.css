@@ -112,8 +112,6 @@ a {
 }
 
 /* HOME */
-.containerGeneral {
-}
 .homeContainer {
   margin-top: 20px;
   display: flex;
@@ -205,13 +203,24 @@ a {
 }
 
 .containerCards {
-  margin-top: 75px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.customCard {
+  width: 20rem; /* Adjust the width as needed */
+  margin: 0 1rem;
+  margin-bottom: 20px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 .card {
+  margin-bottom: 20px;
   transition: transform 0.3s;
 }
 
@@ -411,10 +420,11 @@ a {
     margin-inline: 50px;
   }
   .containerCards {
-    margin-top: 75px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-top: 75px;
+    align-content: center;
   }
   .card {
     margin-bottom: 50px;
@@ -427,7 +437,7 @@ a {
     flex-direction: column;
   }
   .fromImput {
-    width: 300px;
+    width: 250px;
     height: 40px;
     padding: 10px;
     border-radius: 5px;

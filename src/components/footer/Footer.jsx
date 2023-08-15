@@ -8,7 +8,6 @@ export const Footer = () => {
     const mail = require("../../assets/email.png")
     const facebook = require("../../assets/facebook.png")
     const ig = require("../../assets/instagram.png")
-    const tiktok = require("../../assets/LOGO-TIKTOK-png-300x300.png")
     const logo = require("../../assets/logo.png")
 
     const scrollToSection = (sectionId) => {
@@ -28,9 +27,9 @@ export const Footer = () => {
                                 alt="Imagen completa"
                                 className='footerImg'
                             />
-                            <h4>Direcion</h4>
+                            <h4>Dirección</h4>
                         </div>
-                        <span>Los Relejos - 38410, Santa Cruz de Tenerife</span>
+                        <span>Los Realejos - 38410, Santa Cruz de Tenerife</span>
                     </div>
                     <div>
                         <div className='footerItemContainer'>
@@ -91,14 +90,6 @@ export const Footer = () => {
                                 className='footerImg'
                             />
                             <a href="https://www.instagram.com/impermeabilizacionesfp/" target="_blank" rel="noopener noreferrer">Visita nuestro perfil de Instagram</a>
-                        </div>
-                        <div>
-                            <img
-                                src={tiktok}
-                                alt="Imagen completa"
-                                className='footerImg'
-                            />
-                            <a href="https://www.tiktok.com/@tu_perfil_de_tiktok" target="_blank" rel="noopener noreferrer">Visita nuestro perfil de TikTok</a>
                         </div>
                     </div>
                 </div>

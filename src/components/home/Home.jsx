@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import Carousel from "react-bootstrap/Carousel";
-import Card from 'react-bootstrap/Card';
+import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Carousel from "react-bootstrap/Carousel";
 import { Form } from '../form/Form';
 import { Obra } from '../obra/Obra';
 
 const Home = () => {
     const techo = require("../../assets/techo.jpg")
-    const piscina = require("../../assets/piscina.jpg")
+    const piscina = require("../../assets/obra_piscina_10.jpg")
     const azotea = require("../../assets/azotea.jpg")
+    const reforma = require("../../assets/reforma_apartamento_1.jpg")
+    const terraza = require("../../assets/obra_en_terraza_3.jpg")
 
     const carousel1 = require("../../assets/techo_2.jpg")
     const carousel2 = require("../../assets/azotea.jpg")
-    const carousel3 = require("../../assets/azotea.jpg")
+    const carousel3 = require("../../assets/obra_piscina_10.jpg")
 
     const [showModal, setShowModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
@@ -52,60 +54,46 @@ const Home = () => {
                             window.innerWidth >= 900 ? <h4>Somos expertos en impermeabilización</h4> : <></>
                         }
                         <h4 className="letter-animation" onClick={() => scrollToSection('contacto')}>
-                            <span>C</span><span>O</span><span>N</span><span>O</span><span>C</span><span>E</span><span>N</span><span>O</span><span>S</span>
+                            <span>C</span><span>O</span><span>N</span><span>Ó</span><span>C</span><span>E</span><span>N</span><span>O</span><span>S</span>
                         </h4>
                     </div>
                 </div>
                 <div className='containerObrasServicios' id="servicios">
                     <h1>SERVICIOS QUE OFRECEMOS</h1>
                     <p>
-                        Nuestro equipo altamente capacitado está a su disposición para brindarle asesoría personalizada,
-                        asegurando que obtenga la solución óptima adecuada para sus requerimientos.
+                        Nuestro equipo, altamente capacitado, está a su disposición para brindarle asesoría personalizada,
+                        asegurando que obtenga la solución óptima y adecuada para sus requerimientos.
                     </p>
                     <div className='containerCards'>
-                        <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
-                            <Card.Img variant="top" src={techo} onClick={() => toggleModal(techo)} style={{ width: '100%', height: '250px' }} />
+                        <Card className='customCard'>
                             <Card.Body>
-                                <Card.Title>Techo</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
+                                <Card.Title>Impermeabilización de techos</Card.Title>
                             </Card.Body>
+                            <Card.Img variant="bottom" src={techo} onClick={() => toggleModal(techo)} className='cardImage' />
                         </Card>
-                        {
-                            window.innerWidth >= 900 ?
-                                <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
-                                    <Card.Body>
-                                        <Card.Title>Piscina</Card.Title>
-                                        <Card.Text>
-                                            Some quick example text to build on the card title and make up the
-                                            bulk of the card's content.
-                                        </Card.Text>
-                                    </Card.Body>
-                                    <Card.Img variant="bottom" src={piscina} onClick={() => toggleModal(piscina)} style={{ width: '100%', height: '250px' }} />
-                                </Card>
-                                :
-                                <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
-                                    <Card.Img variant="bottom" src={piscina} onClick={() => toggleModal(piscina)} style={{ width: '100%', height: '250px' }} />
-                                    <Card.Body>
-                                        <Card.Title>Piscina</Card.Title>
-                                        <Card.Text>
-                                            Some quick example text to build on the card title and make up the
-                                            bulk of the card's content.
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                        }
-                        <Card style={window.innerWidth >= 900 ? { width: '25 rem', margin: '0 1rem' } : { width: '20rem' }}>
-                            <Card.Img variant="top" src={azotea} onClick={() => toggleModal(azotea)} style={{ width: '100%', height: '250px' }} />
+                        <Card className='customCard'>
                             <Card.Body>
-                                <Card.Title>Azotea</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
+                                <Card.Title>Impermeabilización de piscinas</Card.Title>
                             </Card.Body>
+                            <Card.Img variant="bottom" src={piscina} onClick={() => toggleModal(piscina)} className='cardImage' />
+                        </Card>
+                        <Card className='customCard'>
+                            <Card.Body>
+                                <Card.Title>Impermeabilización de azoteas</Card.Title>
+                            </Card.Body>
+                            <Card.Img variant="bottom" src={azotea} onClick={() => toggleModal(azotea)} className='cardImage' />
+                        </Card>
+                        <Card className='customCard'>
+                            <Card.Body>
+                                <Card.Title>Impermeabilización de terrazas</Card.Title>
+                            </Card.Body>
+                            <Card.Img variant="bottom" src={terraza} onClick={() => toggleModal(terraza)} className='cardImage' />
+                        </Card>
+                        <Card className='customCard'>
+                            <Card.Body>
+                                <Card.Title>Reformas</Card.Title>
+                            </Card.Body>
+                            <Card.Img variant="bottom" src={reforma} onClick={() => toggleModal(reforma)} className='cardImage' />
                         </Card>
                         <Modal show={showModal} onHide={toggleModal} centered>
                             <Modal.Body>
@@ -120,18 +108,17 @@ const Home = () => {
                     <div className='containerSoluciones'>
                         <h2>Soluciones a medida</h2>
                         <div className='listaSoluciones'>
-                            <p className='textoSoluciones'>Proporcionamos una amplia gama de opciones para proteger su estructuras de la humedad. Ya sea en edificios o
-                                proyectos de construcción civil,
-                                estamos aquí para ayudarte. Nuestra experiencia en el manejo de problemas de humedad y niveles de agua subterránea
+                            <p className='textoSoluciones'>Proporcionamos una amplia gama de opciones para proteger su estructuras de la humedad. Ya sea en impermeabilizaciones o
+                                reformas, estamos aquí para ayudarte. Nuestra experiencia en el manejo de problemas de humedad y niveles de agua subterránea
                                 nos permite analizar detenidamente cada situación y ofrecer la solución más eficiente y adaptada a sus requerimientos
                                 específicos.
                             </p>
                             <div>
                                 <ul>
                                     <li>Impermeabilización Lámina PVC</li>
-                                    <li>Impermeabilización Lámina bituminosa</li>
+                                    <li>Impermeabilización Lámina Bituminosa</li>
                                     <li>Impermeabilización Depósitos</li>
-                                    <li>Impermeabilización de obras civiles</li>
+                                    <li>Impermeabilización de Obras Civiles</li>
                                     <li>Impermeabilización Jardineras</li>
                                 </ul>
                             </div>
@@ -139,24 +126,23 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='containerObrasServicios' id="obras">
-                    <h1>OBRAS</h1>
+                    <h1>TRABAJO REALIZADO</h1>
                     <p>
                         Poseemos una amplia trayectoria de más de tres décadas en el sector, lo que nos ha permitido consolidarnos como una empresa
-                        cuyo trabajo habla por sí mismo. Nuestros clientes incluyen algunas de las constructoras más destacadas del archipiélago.
-                        Nos enorgullecemos de llevar a cabo proyectos de diversos tamaños, desde obras particulares de menor escala hasta
+                        cuyo trabajo habla por sí mismo. Nos enorgullecemos de llevar a cabo proyectos de diversos tamaños, desde obras particulares de menor escala hasta
                         impresionantes edificaciones y obras civiles de gran envergadura.
                     </p>
-                    <Obra/>
+                    <Obra />
                 </div>
                 <div className='containerObrasServicios' id="nosotros">
                     <h1>SOBRE NOSOTROS</h1>
                     <p>
-                        Somos una empresa familiar con más de 30 años de experiencia en la industria de la construcción y la impermeabilización.
+                        Somos una empresa familiar con más de 30 años de experiencia en la industria de la impermeabilización y reforma.
                         Nuestro fundador, Felipe Díaz Pacheco, ha dedicado la mayor parte de su vida a perfeccionar las técnicas y soluciones
                         para la impermeabilización, convirtiéndonos en un referente confiable y profesional en el campo.
                     </p>
                     <p>
-                        Nuestra historia comenzó hace mas de tres décadas con una visión clara: proporcionar soluciones de alta calidad para la
+                        Nuestra historia comenzó hace más de tres décadas con una visión clara: proporcionar soluciones de alta calidad para la
                         impermeabilización y el aislamiento, tanto en proyectos de edificación como en obras civiles. A lo largo de los años,
                         hemos acumulado un profundo conocimiento y experiencia en el control de humedades y niveles freáticos, lo que nos ha
                         permitido abordar desafíos diversos y ofrecer soluciones eficaces y duraderas.
@@ -164,13 +150,12 @@ const Home = () => {
                     <p>
                         Cada proyecto que abordamos es un testimonio de nuestra dedicación y compromiso con la excelencia. Nuestro equipo de
                         profesionales altamente capacitados y apasionados comparte la visión de proporcionar resultados excepcionales a nuestros
-                        clientes. Trabajamos de la mano con arquitectos, ingenieros y contratistas para garantizar que cada aspecto de la
-                        impermeabilización y el aislamiento cumpla con los más altos estándares de calidad.
+                        clientes.
                     </p>
                     <p>
-                        En ImpermeabilizacionesFP, no solo ofrecemos servicios y productos de vanguardia, sino que también brindamos
+                        En Impermeabilizaciones Felipe e Hijo, no solo ofrecemos servicios, sino que también brindamos
                         asesoramiento experto y personalizado. Entendemos que cada proyecto es único y merece soluciones adaptadas a
-                        sus necesidades específicas. Ya sea una pequeña reforma o un gran proyecto de construcción, estamos comprometidos a
+                        sus necesidades específicas. Estamos comprometidos a
                         brindar resultados sobresalientes y a construir relaciones duraderas con nuestros clientes.
                     </p>
                     <p>
@@ -182,8 +167,8 @@ const Home = () => {
                 </div>
                 <div className='containerObrasServicios' id='contacto'>
                     <h1>CONTACTA CON NOSOTROS</h1>
-                    <p>Rellene este formulario y nos pondremos en contacto con usted lo antes posible</p>
-                    <Form/>
+                    <p>Rellene este formulario y nos pondremos en contacto con usted lo antes posible.</p>
+                    <Form />
                 </div>
             </div>
         </>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import EmailServices from '../../services/email.service';
 
@@ -51,7 +51,7 @@ export const Form = () => {
             <div className="form-container">
                 {isComponentInoperable && (
                     <div className="inoperable-overlay">
-                        <p>Muy pronto estará diponible esta opción, para contactar con nosotros llame al <b>+34 630 563 416</b> o al <b> +34 677 244 041</b>, o si prefiere puede enviar un correo a <b>impermeabilizacionesfp@gmail.com</b></p>
+                        <p>Muy pronto estará diponible esta opción, para contactar con nosotros llame al <b>+34 630 563 416</b> o al <b> +34 677 244 041</b>, o si prefiere puede enviar un correo a <b>impermeabilizacionesfelipe@gmail.com</b></p>
                     </div>
                 )}
                 <form className="formItemsContainer" onSubmit={handleOnSubmit}>
