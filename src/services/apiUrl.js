@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:8181/api/v1";
+export const API_URL = "http://test-1-env.eba-wum8fqhk.eu-west-2.elasticbeanstalk.com/api/v1";

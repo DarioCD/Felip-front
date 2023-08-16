@@ -13,7 +13,7 @@ export const Form = () => {
 
     const [inputsData, setinputsData] = useState(initialInputsData);
     const [isLoading, setIsLoading] = useState(false);
-    const isComponentInoperable = true;
+    const isComponentInoperable = false; //Activar esto si el email no funciona 
 
 
     const handleOnChange = (e) => {

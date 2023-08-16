@@ -51,7 +51,7 @@ export const Footer = () => {
                             />
                             <h4>Email</h4>
                         </div>
-                        <span>impermeabilizacionesfp@gmail.com</span>
+                        <span>impermeabilizacionesfelipe@gmail.com</span>
                     </div>
                     <div>
                         <div className='footerItemContainer'>
